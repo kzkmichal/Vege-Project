@@ -1,0 +1,51 @@
+@mixin centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin separator {
+    background-color: $color-primary-light-2;
+    width: 3px;
+}
+
+@mixin boxShadow {
+    box-shadow: 0 0 1rem rgba($color-black, 0.1);
+}
+
+
+/*
+600px <-mobile  37.5em
+768px <- tablet portrait 48em
+991px <- tablet landscape 62em
+1088px <- desktop 68em
+1em= 16px
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint==mobile {
+        @media(max-width: 37.5em) {
+            @content
+        }
+        ;
+    }
+    @if $breakpoint==tab-port {
+        @media(max-width: 48em) {
+            @content
+        }
+        ;
+    }
+    @if $breakpoint==tab-land {
+        @media(max-width: 62em) {
+            @content
+        }
+        ;
+    }
+    @if $breakpoint==desktop {
+        @media(max-width: 68em) {
+            @content
+        }
+        ;
+    }
+}

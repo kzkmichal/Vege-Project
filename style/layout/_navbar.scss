@@ -1,0 +1,71 @@
+.navigation {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-weight: 700;
+    background-color: $color-white;
+    @include respond(tab-port) {
+        flex-direction: column;
+    }
+    &__logo {
+        margin-right: auto;
+        height: 5rem;
+        @include respond(tab-port) {
+            margin: 1rem 0;
+            height: 4rem;
+        }
+        @include respond(mobile) {
+            height: 5rem;
+        }
+    }
+    &__bar {
+        display: flex;
+        padding-inline-start: 0px;
+        @include respond(tab-port) {
+            justify-content: space-around;
+            margin-top: 0;
+        }
+    }
+    &__link {
+        color: $color-dark-1;
+        padding: 2rem;
+        text-decoration: none;
+        position: relative;
+        transition: color 0.2s;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 10%;
+            left: 10%;
+            width: 80%;
+            height: 4px;
+            background-color: $color-primary;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        &:hover {
+            color: $color-primary
+        }
+        &:hover:after {
+            opacity: 1;
+        }
+        @include respond(tab-land) {
+            padding: 1rem;
+        }
+        @include respond(mobile) {
+            font-size: 2.5rem;
+            padding: 1rem 1.5rem;
+        }
+    }
+    &__link--first {
+        color: $color-primary;
+        position: relative;
+        &::after {
+            content: "";
+            opacity: 1;
+        }
+    }
+    li:last-child &__link {
+        color: $color-grey;
+    }
+}

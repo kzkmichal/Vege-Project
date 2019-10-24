@@ -1,0 +1,125 @@
+    .navbar {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 9rem;
+        background-color: $color-white;
+        box-shadow: 0 .3rem 1rem rgba($color-black, 0.2);
+        z-index: 9999;
+    }
+
+    ////////////////
+    // HEADER
+    .header {
+        height: 100vh;
+        &__text-box {
+            height: 100%;
+            margin: 0 auto;
+            background-image: url(images/home_vegetables_slider_bg.jpg);
+            background-size: cover;
+            background-position: top;
+            background-attachment: scroll;
+            margin-bottom: 10rem;
+        }
+    }
+
+    /////////////////////
+    // SECTION OFFER
+    .section-offer {
+        margin-top: -8rem;
+        .our-offer {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 15rem 0;
+            background-image: url(images/home_vegetables_wrapbg1.png);
+            background-repeat: no-repeat;
+            z-index: 4;
+            &__column {
+                align-items: flex-end;
+                margin: 0 2rem;
+            }
+        }
+    }
+
+    ////////////////////////////////////////////////////////////////
+    //SECTION INSPIRATION
+    .section-inspiration {
+        background-image: url(images/home_vegetables_sectionbg1.jpg);
+        background-size: auto;
+        background-position: top;
+        padding: 11rem 0 18rem 0;
+    }
+
+    //////////////////////////////////////////
+    // SECTION STATISTIC
+    .statistic {
+        background-image: url(images/home_vegetables_wrapbg2.jpg);
+        background-size: auto;
+    }
+
+    /////////////////////
+    // SECTION  PRICES
+    .prices {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5rem;
+        .prices-header,
+        .prices-information {
+            display: flex;
+            justify-content: center;
+            padding: 3rem 0;
+        }
+        h2 {
+            color: $color-black;
+            margin: 0;
+        }
+    }
+
+    //////////////@at-root
+    // SECTION CONTACT
+    .section-contact {
+        background-image: url(images/home_vegetables_subheader4.jpg);
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        .contact {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding-bottom: 4rem;
+            &__header {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .title {
+                    margin: 8rem 0;
+                }
+            }
+            &__form {
+                display: flex;
+                height: auto;
+                background-color: $color-white;
+                position: relative;
+            }
+        }
+    }
+
+    //////////////////////////////////////////////////////////@at-root
+    // SECTION FOOTER
+    footer {
+        background-image: url(images/home_vegetables_sectionbg3.png);
+        background-size: auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        .copyright {
+            background-color: rgb(249, 245, 241);
+            @include boxShadow;
+            &__text {
+                color: $color-black;
+                font-size: 1.6rem;
+                font-weight: 700;
+                padding: 2rem 0;
+            }
+        }
+    }

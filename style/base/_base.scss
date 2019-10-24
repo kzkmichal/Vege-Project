@@ -1,0 +1,62 @@
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+
+        html {
+            font-size: 62.5%;
+            /*We put in root element % value because we want to match to other users default value of font-size
+    Here 62.5% refers to 16px which is default font size of chrome browser.*/
+            scroll-behavior: smooth;
+            @include respond(tab-land) {
+                font-size: 56.25%;
+            }
+            @include respond(tab-port) {
+                font-size: 50%;
+            }
+            @include respond(desktop) {
+                font-size: 60%;
+            }
+            @include respond(mobile) {
+                font-size: 40%;
+            }
+        }
+
+        body {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'muli', sans-serif;
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 1.7;
+            color: $color-white;
+            margin: 0 auto;
+            /*we put all this properties in body selector because they will  be inherited to the child elements*/
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 4rem;
+            margin: 0;
+        }
+
+        h3 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .grid {
+            max-width: $grid-width;
+            margin: 0 auto;
+            height: inherit;
+            @include respond(desktop) {
+                margin: 0 1rem;
+            }
+        }

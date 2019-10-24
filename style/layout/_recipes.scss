@@ -1,0 +1,128 @@
+          .inspirations {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              @include respond(tab-land) {
+                  flex-direction: column;
+                  background-color: rgba($color-white, .8);
+              }
+          }
+
+          .recipe {
+              display: flex;
+              flex-direction: column;
+              flex: 1;
+              justify-content: space-around;
+              margin-right: 1rem;
+              @include respond(tab-land) {
+                  align-items: center;
+                  margin: 0;
+              }
+              &__inspire {
+                  font-family: $font-secondary;
+                  color: $color-primary;
+                  font-size: 1.5rem;
+                  font-weight: 700;
+                  @include respond(tab-land) {
+                      // align-self: flex-start;
+                      font-size: 3rem;
+                      margin-bottom: 2rem;
+                  }
+              }
+              &__heading {
+                  color: $color-black;
+                  line-height: 1.2;
+                  margin: 0;
+                  @include respond(desktop) {
+                      font-size: 3.5rem;
+                  }
+                  @include respond(tab-port) {
+                      font-size: 3rem;
+                  }
+              }
+              &__button {
+                  @include respond(tab-land) {
+                      // align-self: flex-end;
+                  }
+              }
+              p {
+                  @include respond(tab-land) {
+                      margin: 2rem 25%;
+                  }
+              }
+              &__video {
+                  width: 100%;
+                  display: flex;
+                  overflow: hidden;
+                  img {
+                      width: 100%;
+                      transform: scale(1);
+                      transition: all 0.4s ease-in-out;
+                      &:hover {
+                          transform: scale(1.1);
+                      }
+                  }
+                  @include respond(tab-land) {
+                      display: none;
+                  }
+              }
+              &__description {
+                  background-color: $color-primary;
+                  flex-shrink: 1;
+                  margin: 0;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  padding: 6rem 5rem;
+                  transition: all 0.4s;
+                  @include respond(desktop) {
+                      padding: 5rem 4rem;
+                  }
+                  h4 {
+                      margin: 0;
+                      font-size: 2.2rem;
+                      line-height: 1.4;
+                  }
+                  &:hover {
+                      background-color: $color-primary-dark;
+                  }
+                  @include respond(tab-land) {
+                      display: none
+                  }
+              }
+          }
+
+          .plate {
+              flex: 2;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              position: relative;
+              @include respond(tab-land) {
+                  margin: 2rem;
+              }
+              &__image {
+                  width: 80%;
+                  height: auto;
+              }
+              &__video-button {
+                  visibility: hidden;
+                  &:link,
+                  &:visited,
+                  &:active {
+                      text-decoration: none;
+                      background-color: none;
+                  }
+                  @include respond(tab-land) {
+                      visibility: visible;
+                      @include centered;
+                      transform: translate(-50%, -70%);
+                      color: $color-white;
+                      font-size: 2rem;
+                      padding: 2rem;
+                      border-radius: 5px;
+                      border: 1px solid $color-white;
+                      box-shadow: 0 0 3rem 4rem rgba($color-black, 0.6), inset 0 0 2rem 4rem rgba($color-black, 0.6);
+                  }
+              }
+          }
