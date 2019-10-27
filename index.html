@@ -23,7 +23,8 @@
         <div class="grid">
             <div class="navigation">
                 <img class="navigation__logo" src="images/retina-vegetables (1).png" alt="logo">
-                <ul class="navigation__bar">
+                <div class="navigation__button" onclick="toggle_visibility('js-button');"><span class="navigation__icon">&nbsp;</span></div>
+                <ul class="navigation__bar" id="js-button">
                     <li><a href="#" class="navigation__link navigation__link--first">Home</a></li>
                     <li><a href="#" class="navigation__link">Company</a></li>
                     <li><a href="#" class="navigation__link">Rewievs</a></li>
@@ -294,7 +295,7 @@
         </div>
 
     </div>
-
+    <script src="main.bundle.js"></script>
 </body>
 
 </html>

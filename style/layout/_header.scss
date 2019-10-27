@@ -14,12 +14,16 @@
                    font-size: 7rem;
                }
                @include respond(tab-port) {
-                   font-size: 6rem;
+                   font-size: 4.5rem;
                }
            }
            &__sub {
                font-family: $font-secondary;
                font-weight: 700;
                padding-bottom: 4rem;
+               @include respond(tab-port) {
+                   font-size: 3rem;
+                   padding-top: 3rem;
+               }
            }
        }

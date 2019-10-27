@@ -62,7 +62,12 @@
          display: flex;
          flex-direction: column;
          @include respond(tab-port) {
-             padding: 2rem 1rem;
+             padding: 2rem 2rem;
+         }
+         @include respond(mobile) {
+             align-items: center;
+             padding: 2rem 3rem;
+             overflow-x: hidden;
          }
          &>*:not(:last-child) {
              margin-bottom: 2rem;
@@ -72,9 +77,16 @@
              flex: 1;
              &:not(:last-child) {
                  margin-right: 1rem;
+                 @include respond(mobile) {
+                     margin-right: 0;
+                     margin-bottom: 2rem;
+                 }
              }
              @include respond(tab-land) {
                  height: 100%;
+             }
+             @include respond(mobile) {
+                 width: 100%;
              }
          }
          @include respond(tab-land) {
@@ -84,6 +96,11 @@
              display: flex;
              align-items: center;
              width: 100%;
+             @include respond(mobile) {
+                 flex-direction: column;
+                 align-items: flex-start;
+                 flex: 1;
+             }
          }
          &__text {
              color: $color-black;
@@ -91,7 +108,9 @@
              margin-top: 0;
          }
          &__input {
-             width: 100%;
+             @include respond(mobile) {
+                 width: 100%;
+             }
          }
          &__input,
          &__textAeria {
@@ -99,7 +118,8 @@
              color: $color-grey-light;
              font-size: 1.4rem;
              border: 1px solid $color-grey-light-2;
-             padding: 1rem;
+             padding: 2rem 0;
+             width: 100%;
              &:focus,
              &:link {
                  outline: none;
@@ -109,13 +129,8 @@
          &__textAeria {
              height: 100%;
              max-width: 100%;
+             @include respond(mobile) {
+                 width: 100%;
+             }
          }
      }
-     /*
-
-kolor czerwony-1:
-
-
-
-
-*/

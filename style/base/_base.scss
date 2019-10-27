@@ -59,4 +59,7 @@
             @include respond(desktop) {
                 margin: 0 1rem;
             }
+            @include respond(mobile) {
+                margin: 0;
+            }
         }

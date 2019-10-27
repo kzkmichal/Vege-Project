@@ -24,8 +24,11 @@
                   font-size: 1.5rem;
                   font-weight: 700;
                   @include respond(tab-land) {
-                      // align-self: flex-start;
                       font-size: 3rem;
+                      margin-bottom: 2rem;
+                  }
+                  @include respond(mobile) {
+                      font-size: 3.5rem;
                       margin-bottom: 2rem;
                   }
               }
@@ -39,6 +42,9 @@
                   @include respond(tab-port) {
                       font-size: 3rem;
                   }
+                  @include respond(mobile) {
+                      font-size: 2.5rem;
+                  }
               }
               &__button {
                   @include respond(tab-land) {
@@ -47,7 +53,10 @@
               }
               p {
                   @include respond(tab-land) {
-                      margin: 2rem 25%;
+                      margin: 3rem 25%;
+                  }
+                  @include respond(mobile) {
+                      margin: 3rem 10%;
                   }
               }
               &__video {
@@ -123,6 +132,9 @@
                       border-radius: 5px;
                       border: 1px solid $color-white;
                       box-shadow: 0 0 3rem 4rem rgba($color-black, 0.6), inset 0 0 2rem 4rem rgba($color-black, 0.6);
+                  }
+                  @include respond(mobile) {
+                      padding: 1.5rem;
                   }
               }
           }

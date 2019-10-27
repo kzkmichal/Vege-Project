@@ -2,6 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include respond(mobile) {
+        text-align: center;
+    }
 }
 
 .prices-information {
@@ -13,6 +16,10 @@
     }
     @include respond(tab-land) {
         flex-wrap: wrap;
+        padding: 3rem 3rem;
+    }
+    @include respond(tab-port) {
+        padding: 3rem 10rem;
     }
     .prices-info {
         flex: 1;
@@ -22,13 +29,12 @@
         padding: 2em 0;
         margin: 0 1.2rem;
         @include respond(tab-land) {
-            margin: 1rem 0;
+            margin: 2rem 0;
             flex: 1 0 50%;
         }
         @include respond(tab-port) {
             flex-basis: 100%;
             @include boxShadow;
-            margin: 0;
         }
         &--1 {
             background-color: rgb(249, 245, 241);
@@ -65,7 +71,7 @@
             padding: 1rem 3rem;
             @include respond(tab-port) {
                 font-size: 1.6rem;
-                margin: 0 20%;
+                margin: 0 15%;
                 padding: 2rem;
             }
         }

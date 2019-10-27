@@ -6,13 +6,14 @@
     background-color: $color-white;
     @include respond(tab-port) {
         flex-direction: column;
+        position: relative;
     }
     &__logo {
         margin-right: auto;
         height: 5rem;
         @include respond(tab-port) {
             margin: 1rem 0;
-            height: 4rem;
+            height: 5rem;
         }
         @include respond(mobile) {
             height: 5rem;
@@ -22,8 +23,20 @@
         display: flex;
         padding-inline-start: 0px;
         @include respond(tab-port) {
-            justify-content: space-around;
-            margin-top: 0;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            background-color: $color-white;
+            display: none;
+            margin: 0;
+        }
+        li {
+            @include respond(tab-port) {
+                width: 100%;
+                padding: 1rem 0;
+                text-align: center;
+                border-top: .5px solid $color-grey-light-2;
+            }
         }
     }
     &__link {
@@ -32,6 +45,7 @@
         text-decoration: none;
         position: relative;
         transition: color 0.2s;
+        width: 100%;
         &::after {
             content: "";
             position: absolute;
@@ -50,11 +64,7 @@
             opacity: 1;
         }
         @include respond(tab-land) {
-            padding: 1rem;
-        }
-        @include respond(mobile) {
-            font-size: 2.5rem;
-            padding: 1rem 1.5rem;
+            padding: 2rem 1rem;
         }
     }
     &__link--first {
@@ -63,9 +73,49 @@
         &::after {
             content: "";
             opacity: 1;
+            @include respond(tab-port) {
+                display: none;
+            }
         }
     }
     li:last-child &__link {
         color: $color-grey;
+    }
+    &__button {
+        position: absolute;
+        top: 3rem;
+        right: 2rem;
+        display: none;
+        @include respond(tab-port) {
+            display: block;
+        }
+    }
+    &__icon {
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-black;
+            display: inline-block;
+        }
+        & {
+            //position: absolute;
+            // top: rem;
+            // right: 2rem;
+        }
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all 0.2s
+        }
+        &::before {
+            top: -1rem;
+        }
+        &::after {
+            top: 1rem;
+        }
     }
 }
