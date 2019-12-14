@@ -91,18 +91,12 @@
         }
     }
     &__icon {
-        &,
         &::before,
         &::after {
             width: 3rem;
             height: 2px;
             background-color: $color-black;
             display: inline-block;
-        }
-        & {
-            //position: absolute;
-            // top: rem;
-            // right: 2rem;
         }
         &::before,
         &::after {
@@ -118,4 +112,8 @@
             top: 1rem;
         }
     }
+}
+
+.nav-active {
+    display: block;
 }
